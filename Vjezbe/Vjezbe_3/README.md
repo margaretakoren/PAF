@@ -1,7 +1,9 @@
 # Vježbe 3
 
 ### Zadatak 1
-[a](https://github.com/margaretakoren/PAF/blob/286c5906507e9a19ab4226f0bd5b9604b49d4691/Vjezbe/Vjezbe_3/zadatak1_a.py) Oduzmite 5.0 i 4.935. Koji rezultat očekujete? Koji rezultat dobijete koristeći Python? Objasnite. \\
+[a](https://github.com/margaretakoren/PAF/blob/286c5906507e9a19ab4226f0bd5b9604b49d4691/Vjezbe/Vjezbe_3/zadatak1_a.py) Oduzmite 5.0 i 4.935. Koji rezultat očekujete? Koji rezultat dobijete koristeći Python? Objasnite. 
+
+
 [b](https://github.com/margaretakoren/PAF/blob/286c5906507e9a19ab4226f0bd5b9604b49d4691/Vjezbe/Vjezbe_3/zadatak1_b.py) Provjerite iznosi li suma brojeva 0.1, 0.2 i 0.3 broj 0.6. Objasnite rezultat koji ste dobili.
 
 ### [Zadatak 2](https://github.com/margaretakoren/PAF/blob/286c5906507e9a19ab4226f0bd5b9604b49d4691/Vjezbe/Vjezbe_3/zadatak2.py)
@@ -14,10 +16,10 @@ Ispišite konačni rezultat za 200, 2000 i 20000 iteracija. Objasnite rezultat k
 
 [b](https://github.com/margaretakoren/PAF/blob/286c5906507e9a19ab4226f0bd5b9604b49d4691/Vjezbe/Vjezbe_3/zadatak3.py) Napišite program pod [a](https://github.com/margaretakoren/PAF/blob/286c5906507e9a19ab4226f0bd5b9604b49d4691/Vjezbe/Vjezbe_3/arithm.py) koristeći gotove module.
 
-\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
+$$\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i$$
 \\
 
-\sigma = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2}
+$$\sigma = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2}$$
 
 
 
