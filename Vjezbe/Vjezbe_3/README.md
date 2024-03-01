@@ -14,12 +14,10 @@ Ispišite konačni rezultat za 200, 2000 i 20000 iteracija. Objasnite rezultat k
 
 [b](https://github.com/margaretakoren/PAF/blob/286c5906507e9a19ab4226f0bd5b9604b49d4691/Vjezbe/Vjezbe_3/zadatak3.py) Napišite program pod [a](https://github.com/margaretakoren/PAF/blob/286c5906507e9a19ab4226f0bd5b9604b49d4691/Vjezbe/Vjezbe_3/arithm.py) koristeći gotove module.
 
-![Arithmetic Mean](https://latex.codecogs.com/svg.latex?\Large&space;\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i)
+\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
+\\
 
-
-
-![Standard Deviation](https://latex.codecogs.com/svg.latex?\Large&space;\sigma = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2})
-
+\sigma = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2}
 
 
 
