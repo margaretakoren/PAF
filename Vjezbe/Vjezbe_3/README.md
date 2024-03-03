@@ -3,12 +3,23 @@
 ### Zadatak 1
 [a](https://github.com/margaretakoren/PAF/blob/286c5906507e9a19ab4226f0bd5b9604b49d4691/Vjezbe/Vjezbe_3/zadatak1_a.py) Oduzmite 5.0 i 4.935. Koji rezultat očekujete? Koji rezultat dobijete koristeći Python? Objasnite. 
 
+Rezultat koji dobijemo, 0.06500000000000039 umjesto očekivanog -0.065, proizlazi iz ograničenja u prikazivanju decimalnih brojeva u binarnom formatu u memoriji računala.
+
+U Pythonu, kao i u većini programskih jezika, brojevi s pomičnim zarezom predstavljaju se koristeći binarni format prema IEEE 754 standardu. To znači da se svaki decimalni broj koji se unese u računalo pretvara u binarni zapis za računanje.
+
+Kada oduzmemo 5.0 od 4.935, rezultat bi trebao biti -0.065. Međutim, zbog ograničene preciznosti aritmetike s pomičnim zarezom u binarnom formatu, stvarni rezultat pohranjen u memoriji je malo drugačija binarna aproksimacija -0.065. To je zato što se 0.065 ne može točno predstaviti u binarnom formatu s pomičnim zarezom.
+
+Binarno prikazivanje broja 0.065 postaje beskonačno ponavljajući binarni broj zbog toga što se ne može točno izraziti u binarnom obliku. Stoga računalo aproksimira tu vrijednost što je moguće bliže unutar granica aritmetike s pomičnim zarezom. Ova greška aproksimacije je razlog zašto se dobije rezultat poput 0.06500000000000039 umjesto očekivanog -0.065.
+
+U binarnom sustavu brojevi se predstavljaju kao zbroj potencija broja 2. Međutim, neki decimalni brojevi se ne mogu točno predstaviti u tom formatu. To dovodi do grešaka u zaokruživanju i razlika između očekivanih i stvarnih rezultata prilikom rada s aritmetikom s pomičnim zarezom.
 
 [b](https://github.com/margaretakoren/PAF/blob/286c5906507e9a19ab4226f0bd5b9604b49d4691/Vjezbe/Vjezbe_3/zadatak1_b.py) Provjerite iznosi li suma brojeva 0.1, 0.2 i 0.3 broj 0.6. Objasnite rezultat koji ste dobili.
 
 ### [Zadatak 2](https://github.com/margaretakoren/PAF/blob/286c5906507e9a19ab4226f0bd5b9604b49d4691/Vjezbe/Vjezbe_3/zadatak2.py)
 Napišite funkciju koja uzima broj iteracija N te N puta zbraja 1/3 pa zatim N puta oduzima 1/3 broju 5.
 Ispišite konačni rezultat za 200, 2000 i 20000 iteracija. Objasnite rezultat koji ste dobili.
+
+Kada koristimo manji broj iteracija, poput 200, rezultat će biti bliži očekivanom rezultatu, ali može još uvijek biti podložan greškama u aritmetici s pomičnim zarezom. Kako sve više povećavamo broj iteracija, rezultat će postajati precizniji, ali postoji granica do koje računalo može precizno izračunati rezultat zbog ograničenja u pohrani i aritmetici s pomičnim zarezom.
 
 ### Zadatak 3
 
@@ -17,15 +28,16 @@ Ispišite konačni rezultat za 200, 2000 i 20000 iteracija. Objasnite rezultat k
 [b](https://github.com/margaretakoren/PAF/blob/286c5906507e9a19ab4226f0bd5b9604b49d4691/Vjezbe/Vjezbe_3/zadatak3.py) Napišite program pod [a](https://github.com/margaretakoren/PAF/blob/286c5906507e9a19ab4226f0bd5b9604b49d4691/Vjezbe/Vjezbe_3/arithm.py) koristeći gotove module.
 
 $$\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i$$
-\\
+
+
 
 $$\sigma = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2}$$
 
 
 
 
-### Zadatak 4
-Napišite program linregress.py za određivanje modula torzije Dt aluminijske šipke ako znamo da vrijedi
+### [Zadatak 4](https://github.com/margaretakoren/PAF/blob/6e43effc1725a526d0b22025682751d58cb8b806/Vjezbe/Vjezbe_3/linregress.py)
+Napišite program [linregress.py](https://github.com/margaretakoren/PAF/blob/6e43effc1725a526d0b22025682751d58cb8b806/Vjezbe/Vjezbe_3/linregress.py) za određivanje modula torzije Dt aluminijske šipke ako znamo da vrijedi
 M = Dt · φ. Parametri su nam zadani kao M = [0.052, 0.124, 0.168, 0.236, 0.284, 0.336] Nm,
 φ = [0.1745, 0.3491, 0.5236, 0.6981, 0.8727, 1.0472] rad. Formule koje možete iskoristiti za doći do grafa
 linearne regresije su: $y = ax + b, b = 0$
