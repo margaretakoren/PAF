@@ -4,16 +4,16 @@
 [a](https://github.com/margaretakoren/PAF/blob/286c5906507e9a19ab4226f0bd5b9604b49d4691/Vjezbe/Vjezbe_3/zadatak1_a.py) Oduzmite 5.0 i 4.935. Koji rezultat očekujete? Koji rezultat dobijete koristeći Python? Objasnite. 
 
 Rezultat koji dobijemo, 0.06500000000000039 umjesto očekivanog -0.065, proizlazi iz ograničenja u prikazivanju decimalnih brojeva u binarnom formatu u memoriji računala.
-
 U Pythonu, kao i u većini programskih jezika, brojevi s pomičnim zarezom predstavljaju se koristeći binarni format prema IEEE 754 standardu. To znači da se svaki decimalni broj koji se unese u računalo pretvara u binarni zapis za računanje.
-
 Kada oduzmemo 5.0 od 4.935, rezultat bi trebao biti -0.065. Međutim, zbog ograničene preciznosti aritmetike s pomičnim zarezom u binarnom formatu, stvarni rezultat pohranjen u memoriji je malo drugačija binarna aproksimacija -0.065. To je zato što se 0.065 ne može točno predstaviti u binarnom formatu s pomičnim zarezom.
-
 Binarno prikazivanje broja 0.065 postaje beskonačno ponavljajući binarni broj zbog toga što se ne može točno izraziti u binarnom obliku. Stoga računalo aproksimira tu vrijednost što je moguće bliže unutar granica aritmetike s pomičnim zarezom. Ova greška aproksimacije je razlog zašto se dobije rezultat poput 0.06500000000000039 umjesto očekivanog -0.065.
-
 U binarnom sustavu brojevi se predstavljaju kao zbroj potencija broja 2. Međutim, neki decimalni brojevi se ne mogu točno predstaviti u tom formatu. To dovodi do grešaka u zaokruživanju i razlika između očekivanih i stvarnih rezultata prilikom rada s aritmetikom s pomičnim zarezom.
 
 [b](https://github.com/margaretakoren/PAF/blob/286c5906507e9a19ab4226f0bd5b9604b49d4691/Vjezbe/Vjezbe_3/zadatak1_b.py) Provjerite iznosi li suma brojeva 0.1, 0.2 i 0.3 broj 0.6. Objasnite rezultat koji ste dobili.
+
+U Pythonu, očekivali bismo da je zbroj brojeva 0.1, 0.2 i 0.3, broj 0.6. Međutim, zbog ograničenja u reprezentaciji brojeva s pomičnim zarezom u računarskoj aritmetici, rezultat ovog zbroja neće biti točno 0.6. 
+Ovo se događa zbog toga što decimalni brojevi poput 0.1, 0.2 i 0.3 nemaju točan binarni ekvivalent u računarskoj aritmetici. Kada se ovi brojevi zbroje, rezultat može biti blizu očekivanog rezultata, ali ne nužno točno isti zbog grešaka u aritmetici s pomičnim zarezom.
+
 
 ### [Zadatak 2](https://github.com/margaretakoren/PAF/blob/286c5906507e9a19ab4226f0bd5b9604b49d4691/Vjezbe/Vjezbe_3/zadatak2.py)
 Napišite funkciju koja uzima broj iteracija N te N puta zbraja 1/3 pa zatim N puta oduzima 1/3 broju 5.
