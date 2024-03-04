@@ -40,5 +40,8 @@ $$\sigma = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2}$$
 _Napišite program [linregress.py](https://github.com/margaretakoren/PAF/blob/6e43effc1725a526d0b22025682751d58cb8b806/Vjezbe/Vjezbe_3/linregress.py) za određivanje modula torzije Dt aluminijske šipke ako znamo da vrijedi_
 _M = Dt · φ. Parametri su nam zadani kao M = [0.052, 0.124, 0.168, 0.236, 0.284, 0.336] Nm, φ = [0.1745, 0.3491, 0.5236, 0.6981, 0.8727, 1.0472] rad._
 _Formule koje možete iskoristiti za doći do grafa linearne regresije su:_ $y = ax + b, b = 0$
-$$a = \frac{\bar{xy}}{\bar{x}^2}
+$$a = \frac{\bar{xy}}{\bar{x}^2}$$
+
+
+
 $$\sigma_a = \sqrt{\frac{1}{n} (\frac{\bar{y}^2}{\bar{x}^2} - \bar{a})^2}$$
