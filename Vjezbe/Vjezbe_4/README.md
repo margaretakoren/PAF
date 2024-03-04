@@ -12,4 +12,4 @@ za koje ste analitički izračunali domet. Da li se numeričko riješenje slaže
 
 ## Zadatak 2
 
-Za česticu početne brzine $v_0 = 10 \frac{m}{s}$ i kuta otklona $\sigma = 60^{\circ}$ nacrtajte graf ovisnoti relativne pogreške numeričkog riješenja o vrijednosti vremenskog koraka $\delta t$.
+Za česticu početne brzine $v_0 = 10 \frac{m}{s}$ i kuta otklona $\theta = 60^{\circ}$ nacrtajte graf ovisnoti relativne pogreške numeričkog riješenja o vrijednosti vremenskog koraka $\delta t$.
