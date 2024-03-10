@@ -24,4 +24,4 @@ U modulu ["calculus.py"](https://github.com/margaretakoren/PAF/blob/6b4a456ba5c5
 
 Testirajte modul na primjeru proizvoljno odabrane funkcije i raspona integracije. Neka korisnik u svom
 kodu importa modul calculus i za integraciju koristi gotove metode iz tog modula. Nacrtajte na istom grafu
-analitičko riješenje i numerička riješenja za različiti broj koraka i obe metode numeričke integracije.
+analitičko riješenje i numerička riješenja za različiti broj koraka i obje metode numeričke integracije.
