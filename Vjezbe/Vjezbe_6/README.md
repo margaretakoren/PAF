@@ -4,8 +4,8 @@
 Napišite modul ["harmonic_oscillator.py"](https://github.com/margaretakoren/PAF/blob/4ff69d7f0d9bcd8df16eaedfc9d8e92c30a4a17f/Vjezbe/Vjezbe_6/harmonic_oscillator.py) koji će sadržavati klasu HarmonicOscillator s raznim metodama
 potrebnim za opis gibanja jednostavnog harmoničkog oscilatora u jednoj dimenziji. Koristeći razvijeni modul
 nacrtajte $x − t$, $v − t$ i $a − t$ graf za neke proizvoljno odabrane početne parametre. Ispitajte preciznost
-numeričkog rješenja za različite korake $\delta t$.
+numeričkog rješenja za različite korake $\Delta t$.
 
 ## Zadatak 2
 
-Razvijenom modulu dodajte metodu koja za zadane početne uvijete numerički računa period titranja. Ispitajte preciznost metode u ovisnosti o veličini koraka $\delta t$.
+Razvijenom modulu dodajte metodu koja za zadane početne uvijete numerički računa period titranja. Ispitajte preciznost metode u ovisnosti o veličini koraka $\Delta t$.
