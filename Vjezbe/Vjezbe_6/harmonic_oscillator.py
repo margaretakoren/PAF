@@ -52,3 +52,12 @@ class HarmonicOscillator:
         plt.tight_layout()
         plt.show()
 
+    def compute_period(self):
+        t_array = np.array(self.t)
+        x_array = np.array(self.x)
+        crossings = np.where(np.diff(np.sign(x_array - x_array[0])))[0]
+        periods = np.diff(t_array)[crossings]
+        mean_period = np.mean(periods)
+
+        return mean_period
+
