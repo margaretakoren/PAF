@@ -6,6 +6,6 @@ potrebnim za opis gibanja jednostavnog harmoničkog oscilatora u jednoj dimenzij
 nacrtajte $x − t$, $v − t$ i $a − t$ graf za neke proizvoljno odabrane početne parametre. Ispitajte preciznost
 numeričkog rješenja za različite korake $\Delta t$.
 
-## Zadatak 2
+## [Zadatak 2](https://github.com/margaretakoren/PAF/blob/3571db61ba86d5d02a18c1100ec1395d38080c3a/Vjezbe/Vjezbe_6/zadatak2.py)
 
 Razvijenom modulu dodajte metodu koja za zadane početne uvijete numerički računa period titranja. Ispitajte preciznost metode u ovisnosti o veličini koraka $\Delta t$.
