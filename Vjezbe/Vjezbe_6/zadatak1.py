@@ -6,7 +6,7 @@ h = ha.HarmonicOscillator()
 h.init(0.1, 10, 0.3, 0)
 h.oscillate(2)
 h.plot_trajectory()
-
+  
 m, k, x0, v0 = 0.1, 10, 0.3, 0
 dt_values = [0.001, 0.01, 0.05]
 
