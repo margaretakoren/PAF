@@ -6,4 +6,4 @@ Napišite kod koji sadrži klasu Projectile koja ima implementirane metode za si
 
 
 ## Zadatak 2
-Klasi Projectile dodajte mogućnost rješavanja problema uz pomoć Runge-Kutta metode 4. reda. Usporedite putanje projektila preko Euler-ove i Runge-Kutta metode za $\Delta t = 0.01$.
+Klasi Projectile dodajte mogućnost rješavanja problema uz pomoć Runge-Kutta metode 4. reda. Usporedite putanje projektila preko Euler-ove i Runge-Kutta metode za $\Delta t$ $= 0.01 $.
