@@ -10,7 +10,7 @@ colors = ['#FF69B4', '#800080', '#4169E1']
 fig = plt.figure(figsize=(20, 10), facecolor='#F0F0F0')  
 
 for dt, label, color in zip(dt_values, labels, colors):
-    p.init(10, 45, 0.1, 0.1, 0.05, dt)
+    p.init(20, 30, 5, 0, 0, dt)
     x, y = p.evolve()
     plt.plot(x, y, label=label, color=color)
 
