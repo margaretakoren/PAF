@@ -14,7 +14,7 @@ for dt, label, color in zip(dt_values, labels, colors):
     x, y = p.evolve()
     plt.plot(x, y, label=label, color=color)
 
-plt.title('Kosi hitac u dvije dimenzije s otporom zraka', fontweight='bold', fontsize = 16)
+plt.title('x-y graf', fontweight='bold', fontsize = 16)
 plt.xlabel('x [m]')
 plt.ylabel('y [m]')
 plt.legend(loc="upper right")
