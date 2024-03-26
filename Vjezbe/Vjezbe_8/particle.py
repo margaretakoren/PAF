@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-class ChargedParticle:
+class ChargedParticle: 
 
     def __init__(self, q, m, v, E, B, dt=0.01):
         self.q, self.m, self.v, self.E, self.B, self.dt = q, m, v, E, B, dt
