@@ -7,37 +7,40 @@ class DoublePendulum:
         self.g = g
         self.theta1_0, self.theta2_0 = theta1_0, theta2_0
         self.omega1_0, self.omega2_0 = omega1_0, omega2_0
-
         self.initial_state = [self.theta1_0, self.omega1_0, self.theta2_0, self.omega2_0]
 
     def equations_of_motion(self, y, t):
         theta1, omega1, theta2, omega2 = y
         delta = theta2 - theta1
 
-        denominator1 = (self.m1 + self.m2) * self.L1 - self.m2 * self.L1 * np.cos(delta) ** 2
-        denominator2 = (self.L2 / self.L1) * denominator1
+        d1 = (self.m1 + self.m2) * self.L1 - self.m2 * self.L1 * np.cos(delta) ** 2
+        d2 = (self.L2 / self.L1) * d1
 
         dtheta1_dt = omega1
         dtheta2_dt = omega2
 
-        domega1_dt = ((self.m2 * self.L1 * omega1 ** 2 * np.sin(delta) * np.cos(delta) +
-                       self.m2 * self.g * np.sin(theta2) * np.cos(delta) +
-                       self.m2 * self.L2 * omega2 ** 2 * np.sin(delta) -
-                       (self.m1 + self.m2) * self.g * np.sin(theta1)) / denominator1)
+        domega1_dt = (
+            (self.m2 * self.L1 * omega1 ** 2 * np.sin(delta) * np.cos(delta) +
+             self.m2 * self.g * np.sin(theta2) * np.cos(delta) +
+             self.m2 * self.L2 * omega2 ** 2 * np.sin(delta) -
+             (self.m1 + self.m2) * self.g * np.sin(theta1)) / d1
+        )
 
-        domega2_dt = ((-self.m2 * self.L2 * omega2 ** 2 * np.sin(delta) * np.cos(delta) +
-                       (self.m1 + self.m2) * self.g * np.sin(theta1) * np.cos(delta) -
-                       (self.m1 + self.m2) * self.L1 * omega1 ** 2 * np.sin(delta) -
-                       (self.m1 + self.m2) * self.g * np.sin(theta2)) / denominator2)
+        domega2_dt = (
+            (-self.m2 * self.L2 * omega2 ** 2 * np.sin(delta) * np.cos(delta) +
+             (self.m1 + self.m2) * self.g * np.sin(theta1) * np.cos(delta) -
+             (self.m1 + self.m2) * self.L1 * omega1 ** 2 * np.sin(delta) -
+             (self.m1 + self.m2) * self.g * np.sin(theta2)) / d2
+        )
 
         return [dtheta1_dt, domega1_dt, dtheta2_dt, domega2_dt]
 
     def rk4_step(self, f, y, t, dt):
-        k1 = f(y, t)
-        k2 = f(y + dt/2 * np.array(k1), t + dt/2)
-        k3 = f(y + dt/2 * np.array(k2), t + dt/2)
-        k4 = f(y + dt * np.array(k3), t + dt)
-        return y + (dt / 6) * (np.array(k1) + 2*np.array(k2) + 2*np.array(k3) + np.array(k4))
+        k1 = np.array(f(y, t))
+        k2 = np.array(f(y + dt/2 * k1, t + dt/2))
+        k3 = np.array(f(y + dt/2 * k2, t + dt/2))
+        k4 = np.array(f(y + dt * k3, t + dt))
+        return y + (dt / 6) * (k1 + 2*k2 + 2*k3 + k4)
 
     def solve(self, t_span=(0, 20), dt=0.01):
         t_values = np.arange(t_span[0], t_span[1], dt)
